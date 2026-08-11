@@ -6,7 +6,7 @@ export default function handler(req, res) {
     const challenge = req.query['hub.challenge'];
 
     if (mode === 'subscribe' && token === 'MY_SECRET_TOKEN') {
-      return res.status(200.send(challenge));
+      return res.status(200).send(challenge);
     } else {
       return res.status(403).send('Verification failed');
     }
